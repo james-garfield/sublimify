@@ -24,11 +24,11 @@ class Subliminals:
         - get_message_radius(message): Returns the radius of the message.
         - skip_pixel((x, y)): Regresa boolean si el pixel debe ser skipped.
     """
-    def __init__(self, messages, amount, visibility=2, font_name=None, font_size=None, spacing=None, skip_method: SkipMethods=None):
+    def __init__(self, messages, amount, visibility=2, font_fam=None, font_name=None, font_size=None, spacing=None, skip_method: SkipMethods=None):
         self.messages = messages
         self.amount = amount
         self.visibility = visibility
-        self.font = choose_font(font_name or "Roboto-Medium", font_size or 35)
+        self.font = choose_font(font_fam or 'Roboto', font_name or "Roboto-Medium", font_size or 35)
         self.spacing = spacing or random.randint(0, 1)
         self.__skip_method__ = skip_method or SkipMethods.POS
         # print(f"spacing: {self.spacing}")

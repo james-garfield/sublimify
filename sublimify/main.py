@@ -16,7 +16,7 @@ POSSIBLE_IMAGES = [
 
 
 def main(image):
-    subliminals = Subliminals(["SEX"], 20, 5, skip_method=SkipMethods.POS)
+    subliminals = Subliminals(["SEX"], 20, 10, skip_method=SkipMethods.RANDOM, font_fam='ComforterBrush')
     editor = Editor(image, subliminals, True, True)
 
     editor.add_subliminals()
